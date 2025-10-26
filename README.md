@@ -1,19 +1,31 @@
-# FHEVM React Template
+# FHEHighScoreGame dApp
 
-A minimal React frontend template for building FHEVM-enabled decentralized applications (dApps). This template provides a simple development interface for interacting with FHEVM smart contracts, specifically the `FHECounter.sol` contract.
+FHEHighScoreGame dApp is a **privacy-focused gaming leaderboard** project. It allows users to **submit and track their game scores securely on the blockchain** using Fully Homomorphic Encryption (FHE). The main goal of this project is to demonstrate **how decentralized applications can handle sensitive data without revealing it**, while still allowing meaningful operations like maintaining score history and leaderboard functionality.
 
-## 🚀 What is FHEVM?
+This project includes:  
+- **A smart contract (`FHEHighScoreGame`)** that stores encrypted scores on-chain  
+- **A React frontend** to interact with the contract, submit scores, and view score history  
+- **FHEVM integration** to handle encryption and decryption of user data  
 
-FHEVM (Fully Homomorphic Encryption Virtual Machine) enables computation on encrypted data directly on Ethereum. This template demonstrates how to build dApps that can perform computations while keeping data private.
+## 🚀 Project Goals
+
+1. **Privacy-first gaming:** Keep user scores encrypted on-chain so no one, including the contract, can see raw numbers.  
+2. **Decentralized leaderboard:** Maintain score histories and allow comparisons without revealing sensitive information.  
+3. **Demonstrate FHE in dApps:** Show how Fully Homomorphic Encryption can be integrated into Ethereum-based applications.  
 
 ## ✨ Features
 
-- **🔐 FHEVM Integration**: Built-in support for fully homomorphic encryption
-- **⚛️ React + Next.js**: Modern, performant frontend framework
-- **🎨 Tailwind CSS**: Utility-first styling for rapid UI development
-- **🔗 RainbowKit**: Seamless wallet connection and management
-- **🌐 Multi-Network Support**: Works on both Sepolia testnet and local Hardhat node
-- **📦 Monorepo Structure**: Organized packages for SDK, contracts, and frontend
+- **🔐 Fully encrypted scores**: All game scores are encrypted and never exposed in plaintext.  
+- **⚛️ Modern frontend**: React + Next.js with Tailwind CSS for a fast and responsive UI.  
+- **🔗 Wallet integration**: Connect via RainbowKit/Wagmi for seamless interactions.  
+
+## 🏗️ Getting Started
+
+1. Clone the repository:  
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+
 
 ## 📋 Prerequinextjss
 
@@ -124,7 +136,7 @@ For more details, see the [MetaMask development guide](https://docs.metamask.io/
 This template uses a monorepo structure with three main packages:
 
 ```
-fhevm-react-template/
+fhe-high-score-game/
 ├── packages/
 │   ├── fhevm-hardhat-template/    # Smart contracts & deployment
 │   ├── fhevm-sdk/                 # FHEVM SDK package
@@ -134,8 +146,8 @@ fhevm-react-template/
 
 ### Key Components
 
-#### 🔗 FHEVM Integration (`packages/nextjs/hooks/fhecounter-example/`)
-- **`useFHECounterWagmi.tsx`**: Example hook demonstrating FHEVM contract interaction
+#### 🔗 FHEVM Integration (`packages/nextjs/hooks`)
+- **`useFHEHighScoreGame.tsx`**: Example hook demonstrating FHEVM contract interaction
 - Essential hooks for FHEVM-enabled smart contract communication
 - Easily copyable to any FHEVM + React project
 

@@ -27,16 +27,16 @@ contract FHEHighScoreGame is SepoliaConfig {
      *      - Allows the submitting player to decrypt this score.
      */
     function submitScore(externalEuint32 scoreEncrypted, bytes calldata proof) external {
-        // 1️⃣ Convert from external → internal FHE
+        // Convert from external → internal FHE
         euint32 score = FHE.fromExternal(scoreEncrypted, proof);
 
-        // 2️⃣ Allow the contract to operate on the ciphertext internally
+        // Allow the contract to operate on the ciphertext internally
         FHE.allowThis(score);
 
-        // 3️⃣ Save the score in the player's history
+        // Save the score in the player's history
         _scoreHistory[msg.sender].push(score);
 
-        // 4️⃣ Allow the submitting player to decrypt the newly submitted score
+        // Allow the submitting player to decrypt the newly submitted score
         FHE.allow(score, msg.sender);
     }
 

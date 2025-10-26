@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/nguyentuancanh/Documents/zama/fhe-high-score-game/packages/hardhat/contracts/FHEHighScoreGame.sol": {
-      "lastModificationDate": 1761469692491,
-      "contentHash": "e94bdd72379b4b0691f41db161b9cbba",
+      "lastModificationDate": 1761471037225,
+      "contentHash": "245217608c3755075b0e4c76b413be51",
       "sourceName": "contracts/FHEHighScoreGame.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -49,8 +49,8 @@
       ]
     },
     "/Users/nguyentuancanh/Documents/zama/fhe-high-score-game/packages/hardhat/fhevmTemp/@fhevm/solidity/config/ZamaConfig.sol": {
-      "lastModificationDate": 1761470596184,
-      "contentHash": "53afa19b446a7b49a624afc5d40ac227",
+      "lastModificationDate": 1761471249728,
+      "contentHash": "36810e84dfdd27616b5eaf3b31ddc0a9",
       "sourceName": "@fhevm/solidity/config/ZamaConfig.sol",
       "solcConfig": {
         "version": "0.8.27",
